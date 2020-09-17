@@ -1,6 +1,6 @@
-String[] stringArray = new String[] {"keyboard", "mouse", "screen", "headset"};
-int[] intArray = new int[] {10, 20, 30, 40};
-boolean[] boolArray = new boolean[] {true, false, !false, !true};
+String[] stringArray = {"keyboard", "mouse", "screen", "headset", "mousepad", "chair"};
+int[] intArray = {20, 30, 10, 40, 88, 680 ,62, 50, 20};
+boolean[] boolArray = {true, false, !false, !true};
 
 void setup() {
   surface.setVisible(false);
@@ -9,31 +9,31 @@ void setup() {
   printIntSum(intArray);
   printIntAverage(intArray);
 }
-// String Array with pc parts 
+// 4.b String Array with pc parts 4b
 void printStr(String[] stringArray) {
-  print("Equals Pc Peripherals: ");
+  print("Pc Peripherals: ");
   for (int i = 0; i < stringArray.length; i++) {
-    print(stringArray[i]+" & ");
+    print(stringArray[i]+", ");
   }
   println("");
 }
-// int sorted from lowest to highest value
+// 4.e int sorted from lowest to highest value 
 void printIntLowToHigh(int[] intArray) {
   print("Low to high:");
   for(int i = 0; i < intArray.length; i++) {
-    print(" "+intArray[i]);
+    int[] sortArray = sort(intArray);
+    print(" "+sortArray[i]);
   }
-  print(" = ");
+  println("");
 }
-// the sum of all ints in the array = 100
+// 4.c the sum of all ints in the array = 100
 void printIntSum(int[] intArray) {
   int sum = 0;
   for (int i : intArray)
     sum += i;
-  print(sum);
-  println("");
+  println(sum+" is the sum");
 }
-// The average value of all ints in the array
+// 4.d The average value of all ints in the array
 void printIntAverage(int[] intArray) {
   int sum = 0;
   for(int i = 0; i < intArray.length; i++)
@@ -41,6 +41,7 @@ void printIntAverage(int[] intArray) {
     double average = sum / intArray.length;
     println("The average value is: " + average);
 }
+
  // Boolean task not asked for in the assignment for some reason, but the array values are here if needed.
 /*
 void printBol(boolean[] boolArray) {
